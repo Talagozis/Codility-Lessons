@@ -1,5 +1,5 @@
 // Code written in C#
-// Correctness: 80 %
+// Correctness: 100 %
 // Performance: 75 %
 // Time Complexity: O(N)
 // Space Complexity: O(1)
@@ -45,5 +45,36 @@ class Solution {
         }
         
         return output[length - 1] + 1;
+    }
+}
+
+using System;
+
+class Solution {
+    public int solution(int[] A) {
+        
+        int length = A.Length;
+        
+        bool[] b = new bool[length];
+        for(int i = 0 ; i < length ; i++)
+            b[i] = false;
+        
+        for(int i = 0 ; i < length ; i++)
+        {
+            if(A[i] > 0 && A[i] <= length)
+            {
+                b[A[i]-1] = true;
+            }              
+        }
+        
+        for(int i = 0 ; i < length ; i++)
+        {
+            if(!b[i])
+            {
+                return i+1;
+            }              
+        }        
+        
+        return A[length -1] +1;
     }
 }
