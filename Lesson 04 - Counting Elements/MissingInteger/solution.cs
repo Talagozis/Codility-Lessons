@@ -1,6 +1,6 @@
 // Code written in C#
 // Correctness: 100 %
-// Performance: 75 %
+// Performance: 88 %
 // Time Complexity: O(N)
 // Space Complexity: O(1)
 
